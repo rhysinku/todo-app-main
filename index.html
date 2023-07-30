@@ -1,36 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <div id="main">
+      <figure class="hero-banner">
+        <img src="images/bg-desktop-light.jpg" alt="" />
+      </figure>
+      <div class="wrapper">
+        <div class="main_con">
+          <div class="main_box">
+            <div class="main_header">
+              <h1>TODO</h1>
+            </div>
+            <!-- Add Task -->
+            <form action="" data-task-form>
+              <input
+                data-task-input
+                type="text"
+                placeholder="Create a new todo..."
+              />
+            </form>
+            <!-- Add Task -->
+            <div class="main_card">
+              <!-- The List of To Task -->
+              <ul class="task_list" data-task-container>
+                <!-- <li>
+                  <input type="checkbox" />
+                  <span class="checkbox_dsgn"></span>
+                  <label for="">Complete online JavaScript Course</label>
+                </li>
+                <li>
+                  <input type="checkbox" />
+                  <span class="checkbox_dsgn"></span>
+                  <label for="">Jog around the park 3x</label>
+                </li>
+                <li>
+                  <input type="checkbox" />
+                  <span class="checkbox_dsgn"></span>
+                  <label for="">10 minutes meditations</label>
+                </li> -->
+              </ul>
+              <!-- The List of To Task -->
+              <div class="main_btm">
+                <div class="task_count" data-list-count></div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+                <ul class="task_filter">
+                  <li class="task_filter_active">All</li>
+                  <li>Active</li>
+                  <li>Completed</li>
+                </ul>
 
-  Todo
+                <div class="task_delete">Clear Completed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- Add dynamic number --> items left
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">PockeyPepero</a>.
+    </div>
 
-  All
-  Active 
-  Completed
+    <template id="task-template">
+      <li>
+        <input type="checkbox" />
+        <span class="checkbox_dsgn"></span>
+        <label></label>
+      </li>
+    </template>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"
+  ></script>
 
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <script src="js/script.js"></script>
 </html>
